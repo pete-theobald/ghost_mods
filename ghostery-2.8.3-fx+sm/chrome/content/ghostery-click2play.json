@@ -1,0 +1,27 @@
+[{"bug":"Twitter Button","aid":605,"selector":".twitter-share-button, .twitter-follow-button, .twitter-hashtag-button, .twitter-mention-button","button":"ghostery_twitter.png","reinject":"true"},
+
+{"bug":"Facebook Like","aid":464,"selector":"iframe[src*=facebook\\.com\\/plugins\\/like\\.php], .fb-like, fb\\:like","alsoAllow":[93,922],"button":"ghostery_facebook.png","reinject":"true"},
+
+{"bug":"Google+","aid":615,"selector":"g\\:plusone, .g-plusone, g\\:plus, .g-plus","button":"ghostery_plus.png","reinject":"true"},
+
+{"bug":"Pinterest pin","aid":868,"selector":".pin-it-button","button":"ghostery_pinterest.png","reinject":"true"},
+
+{"bug":"Linkedin","aid":697,"selector":"script[type$=IN\\/Share]","attach":"parentNode","button":"ghostery_linkedin.png","reinject":"true"},
+
+{"bug":"StumbleUpon","aid":701,"selector":"su\\:badge","button":"ghostery_stumble.png","reinject":"true"},
+
+{"bug":"Facebook Social Plugins","aid":464,"selector":"iframe[src*=facebook\\.com\\/plugins\\/likebox\\.php], iframe[src*=facebook\\.com\\/plugins\\/activity\\.php], .fb-like-box, fb\\:like-box, .fb-activity, fb\\:activity","attach":"parentNode","alsoAllow":[93,922]},
+
+{"bug":"Facebook Comments","aid":464,"selector":"fb\\:comments, #fb-comments","alsoAllow":[93,922]},
+
+{"bug":"intense debate","aid":92,"selector":"#idc-container","frameBackground":"#fff","text":"click2play.comment_form"},
+
+{"bug":"disqus","aid":85,"selector":"#disqus_thread","frameBackground":"#fff","text":"click2play.comment_form"},
+
+{"bug":"brightcove","aid":423,"selector":".BrightcoveExperience","attach":"parentNode","alsoAllow":[951]},
+
+{"bug":"VKontakte","aid":675,"selector":"#vk_like","button":"ghostery_vkontakte.png"},
+
+{"bug":"SoundCloud","aid":1068,"selector":"iframe[src*=w\\.soundcloud\\.com\\/player\\/]","attach":"parentNode"},
+
+{"bug":"5min Media","aid":541,"selector":"script[src*=pshared\\.5min\\.com\\/Scripts\\/]","attach":"parentNode","frameBackground":"#fff"}]
