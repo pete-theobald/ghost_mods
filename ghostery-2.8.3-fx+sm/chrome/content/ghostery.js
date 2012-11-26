@@ -594,10 +594,23 @@ ghostery = {
 					hasNewApp = (hasNewApp != ghostery.prefs.countApps(ghostery.prefs.getBugs(gBrowser.selectedBrowser.contentDocument.location.href)));
 				}
 
+                
 				// update UI only if there is a new entry.
 				if ( ( gBrowser.selectedBrowser.contentDocument.location.href == tracker.policyRequestOrigin ) && (hasNewApp) ) {
 					ghostery.updateTabUI(gBrowser.selectedBrowser.contentDocument);
+					// Modification to leak tracker data by PLT
+					dump(
+                        JSON.stringify(
+                            {
+                                'name':foundBug.bug.name,
+                                'object':foundBug.bug,
+                                'url':gBrowser.selectedBrowser.contentDocument.location.href
+                            }
+                        ) + "\n"
+                    );
+                    // End modification
 				}
+
 			} else if (event.data.action == 'stageError') {
 				// debugging action.
 			}
