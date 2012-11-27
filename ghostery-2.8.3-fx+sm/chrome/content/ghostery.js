@@ -599,15 +599,16 @@ ghostery = {
 				if ( ( gBrowser.selectedBrowser.contentDocument.location.href == tracker.policyRequestOrigin ) && (hasNewApp) ) {
 					ghostery.updateTabUI(gBrowser.selectedBrowser.contentDocument);
 					// Modification to leak tracker data by PLT
-					dump(
-                        JSON.stringify(
+					//dump(
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.open("GET","http://127.0.0.1:8765/tracker/?"+escape(JSON.stringify(
                             {
                                 'name':foundBug.bug.name,
                                 'object':foundBug.bug,
                                 'url':gBrowser.selectedBrowser.contentDocument.location.href
                             }
-                        ) + "\n"
-                    );
+                        )),false);
+                    xmlhttp.send();
                     // End modification
 				}
 
